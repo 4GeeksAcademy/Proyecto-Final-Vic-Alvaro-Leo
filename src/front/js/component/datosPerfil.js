@@ -144,7 +144,7 @@ const DatosPerfil = () => {
                     <div className="row justify-content-center">
                         <div className="col-12 col-md-8 col-lg-6 mt-5">
                             <div id="EtiquetaDatos" className="p-4">
-                                <p className="mt-3 text-center">Correo:</p> <h4 className="text-center mb-5">{usuario.email}</h4>
+                                <p className="mt-3 text-center">Correo:</p> <h4 className="text-center mb-5 description">{usuario.email}</h4>
                                 <p className="text-center">Fecha de nacimiento:</p> <h4 className="text-center mb-5">{perfil.birth_date}</h4>
                                 <p className="mt-5 text-center">Descripción</p>
                                 <h4 className="text-center mb-5">{perfil.description}</h4>
