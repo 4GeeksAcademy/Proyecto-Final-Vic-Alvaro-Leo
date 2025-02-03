@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { Context } from "../store/appContext";
 import "../../styles/muro.css";
 import "../../styles/navbarmovil.css";
 import SocialCard from "../component/SocialCard.jsx";
@@ -11,6 +12,7 @@ import FavGenreComponent from "../component/FavGenreComponent.jsx"
 import DatosPerfil from "../component/datosPerfil.js";
 
 const Muro = () => {
+    const { actions, store } = useContext(Context);
     const [post, setPost] = useState([]);
     const [activeTab, setActiveTab] = useState("publicaciones");
 
@@ -22,7 +24,7 @@ const Muro = () => {
 
     useEffect(() => {
         publicaciones();
-    }, [post]);
+    }, [store.actualizador]);
 
     return (
         <div className="row body">
