@@ -77,3 +77,14 @@
   width: 100%;
 }
 /* boton de favoritos (arriba) */
+
+#FavoritoBoton.added {
+  background-color: #1c1c1c;
+  color: #fff;
+  border-color: black;
+  cursor: default;
+}
+
+.btn:disabled {
+  opacity: 1;
+}
