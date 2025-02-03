@@ -22,20 +22,22 @@ const GameCard = ({ image, title, api_id, videogameId }) => {
 
   return (
     <div id="CardJuego" className="mb-3">
-      <a
-        href={process.env.FRONTEND_URL + `game/${api_id}`}
-        rel="noopener noreferrer"
-        className="text-decoration-none"
-      >
-        <div className="card-header text-center">{title}</div>
-        <div id="Carta" className="card-body justify-content-end">
-          <img src={image} alt={title} className="img-fluid" />
-        </div>
-      </a>
-      <div>
-        <button id="FavoritoBoton" className="m-2" onClick={() => addToFavorites(videogameId)}><span>Añadir a favoritos</span></button>
-      </div>
+  <a
+    href={process.env.FRONTEND_URL + `game/${api_id}`}
+    rel="noopener noreferrer"
+    className="text-decoration-none d-block"
+  >
+    <div className="card-header text-center">{title}</div>
+    <div id="Carta" className="card-body d-flex flex-column align-items-center">
+      <img src={image} alt={title} className="img-fluid w-100" />
     </div>
+  </a>
+  <div className="d-flex justify-content-center">
+    <button id="FavoritoBoton" className="m-2 btn btn-primary" onClick={() => addToFavorites(videogameId)}>
+      <span>Añadir a favoritos</span>
+    </button>
+  </div>
+</div>
   );
 };
 
