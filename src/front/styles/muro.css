@@ -8,13 +8,13 @@
 }
 
 .card-noticia {
-    min-height: 30vh;
-    max-height: 45vh;
+    min-height: 25vh;
+    max-height: 55vh;
     color: rgb(0, 0, 0);
 }
 
 .card-noticia  img {
-    height: 61.8%;
+    height: 60%;
     object-fit: cover;
 }
 

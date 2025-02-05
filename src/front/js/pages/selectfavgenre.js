@@ -11,7 +11,7 @@ export const SelectFavGenre = () => {
 			<h5 className="text-white mb-5">Esto nos ayudará a mejorar tus recomendaciones</h5>
             <FavGenreComponent />
 <Link className="btn text-white bg-dark m-5" to="/muro">
-  Ir al muro
+  Ir al login
 </Link>
 		</div>
 	);

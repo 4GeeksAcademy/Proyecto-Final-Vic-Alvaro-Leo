@@ -1,39 +1,84 @@
-
-/* Contenedor de el carrousel con flechas*/
+/* Contenedor del carousel */
 .carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    margin: auto;
-    overflow: hidden;
-    background-color: transparent;
-  }
-  /* Contenedor de todas las cards del carrousel */
-  .carousel-content {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-  }
-  /* Contenedor de las cards del carrousel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 10px;
+}
+
+/* Contenedor de todas las cards del carousel */
+.carousel-content {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Permite scroll horizontal en móviles */
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+}
+
+/* Ocultar scrollbar en Chrome */
+.carousel-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenedor de cada card del carousel */
+.game-item {
+  flex: 0 0 calc(100% / 3 - 10px); 
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Ajustes responsive para tablets */
+@media (max-width: 768px) {
   .game-item {
-    flex: 0 0 calc(100% / 3 - 10px);
-    text-align: center;
-    padding: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(100% / 3 - 10px); 
   }
-  /* Botones de paginacion */
-  .carousel-button {
-    background-color: #ffd200;
-    color: #000000;
-    padding: 10px;
-    margin: 0 10px;
-    font-size: 14px;
-    border-radius: 10%;
+}
+
+/* Ajustes responsive para móviles */
+@media (max-width: 480px) {
+  .game-item {
+    flex: 0 0 calc(100% /1 - 20px); 
   }
-  /* Botones de paginacion hover*/
-  .carousel-button:hover {
-    background-color: #a98a02;
-    transform: scale(1.2);
-  }
+}
+
+/* Botones de paginación */
+.carousel-button {
+  background-color: #ffd200;
+  color: #000;
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 14px;
+  border-radius: 10%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover en botones */
+.carousel-button:hover {
+  background-color: #a98a02;
+  transform: scale(1.2);
+}
+
+/* Imagen responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botón de favoritos responsivo */
+#FavoritoBoton {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  font-size: 14px;
+}
